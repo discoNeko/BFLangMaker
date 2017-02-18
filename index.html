@@ -1,0 +1,120 @@
+<html>
+	<head>
+		<title>BFLangMaker</title>
+		<meta charset="utf-8" />
+		<link rel="stylesheet" href="css/main.css" />
+		<link href="https://fonts.googleapis.com/earlyaccess/sawarabimincho.css" rel="stylesheet" />
+		<link href="https://fonts.googleapis.com/earlyaccess/mplus1p.css" rel="stylesheet" />
+		<link href="https://fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" />
+	</head>
+	<body>
+
+	<!-- Wrapper -->
+		<div id="wrapper">
+
+		<!-- Header -->
+			<header id="header">
+				<div class="logo">
+					BFLangMaker
+				</div>
+				<div class="h1">
+					- 任意の単語で brainf**k インタプリタを生成するウェッブサービス
+				</div>
+			</header>
+		<!-- Main -->
+			<div id="main">
+				<div class="step">
+					<div class="h1">
+						STEP.1 単語を入力
+					</div>
+					<div class="h2">
+						brainf**k の命令を任意の単語に置き換える。
+					</div>
+					<div class="h3">
+						<div class="h4">
+							『 > 』 : ポインタを一つ進める。
+						</div>
+						<input type="text" id="c0" class="cmd" placeholder="『 > 』 : ここに入力" /><div class="err_length" />
+						<div class="h4">
+							『 < 』 : ポインタを一つ戻す。
+						</div>
+						<input type="text" id="c1" class="cmd" placeholder="『 < 』 : ここに入力" />
+						<div class="h4">
+							『 . 』 : 現在ポインタが指している値を出力する。
+						</div>
+						<input type="text" id="c2" class="cmd" placeholder="『 . 』 : ここに入力" />
+						<div class="h4">
+							『 + 』 : 現在ポインタが指している値を1増やす。
+						</div>
+						<input type="text" id="c3" class="cmd" placeholder="『 + 』 : ここに入力" />
+						<div class="h4">
+							『 - 』 : 現在ポインタが指している値を1減らす。
+						</div>
+						<input type="text" id="c4" class="cmd" placeholder="『 - 』 : ここに入力" />
+						<div class="h4">
+							『 [ 』 : ポインタの指している値が<br>0なら対応する『 ] 』の位置に進む。
+						</div>
+						<input type="text" id="c5" class="cmd" placeholder="『 [ 』 : ここに入力" />
+						<div class="h4">
+							『 ] 』 : ポインタの指している値が<br>0でないなら対応する『 [ 』の位置に戻る。
+						</div>
+						<input type="text" id="c6" class="cmd" placeholder="『 ] 』 : ここに入力" />
+					</div>
+					<div class="h2">
+						言語の名前を設定する。
+					</div>
+					<div class="h3">
+						<input type="text" id="lang_name" class="cmd" placeholder="言語の名前 : ここに入力" />
+					</div>
+					<div class="btns">
+						<input type="submit" id="gen" class="btn" value="言語生成" />
+						<input type="submit" id="reset" class="btn" value="クリア" />
+					</div>
+					<div id="err_message" class="err_message"></div>
+				</div>
+				<div class="step">
+					<div class="h1">
+						STEP.2 ファイルを保存
+					</div>
+					<div class="h2">
+						Hello world のソースを確認する。<br>
+						出力に満足したらダウンロードボタンをクリック。<br>
+						html形式でファイルを保存する。<br>
+					</div>
+					<div class="h3">
+						<div class="tips">
+							Hello world のソース
+							<input type="submit" id="cp1" class="btn copy" data-clipboard-target="#hw_src" data-text="copied!" value="コピー" /><br>
+						</div>
+							<textarea id="hw_src" class="src" placeholder="ここに表示"></textarea>
+					</div>
+					<div class="h3">
+						<div class="tips">
+							インタプリタのソース全文
+							<input type="submit" id="cp2" class="btn copy" data-clipboard-target="#ip_src" data-text="copied!" value="コピー" /><br>
+						</div>
+							<textarea id="ip_src" src="templete" class="src" placeholder="ここに表示"></textarea>
+							
+					</div>
+					<div class="btns dlb">
+						<a href="#" class="download btn big disabled">ダウンロード</a>
+					</div>
+				</div>
+			</div>
+
+		<!-- Footer -->
+			<footer id="footer">
+				<div>
+					<a href="https://twitter.com/share" class="twitter-share-button" data-url="https://disconeko.github.io/BFLangMaker/" data-text="キミだけのプログラミング言語でライバルに差をつけろ！" data-hashtags="BFLangMaker">Tweet</a> <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+					&copy; 2017 <a href="https://github.com/discoNeko">discoNeko</a>.
+				</div>
+			</footer>
+
+		</div>
+
+	<!-- Scripts -->
+		<script src="js/jquery-3.1.1.slim.min.js"></script>
+		<script src="js/main.min.js"></script>
+		<script src="js/clipboard.min.js"></script>
+	</body>
+</html>

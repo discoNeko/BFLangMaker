@@ -1,0 +1,209 @@
+/*
+	main.css
+	author : discoNeko
+	created : 2016/02/11
+	purpose : 
+
+	TODO : 
+		- discoNeko 2016/02/11
+*/
+
+/* Common */
+
+/* Body */
+	body {
+		font-family: "Mplus 1p";
+		margin: auto;
+		background-color: #aad;
+		text-align: center;
+	}
+
+/* Wrapper */
+	#wrapper {
+
+	}
+	
+/* Header */
+	#header {
+		height: 8em;
+		background-color: #669;
+	}
+
+		#header .logo {
+			padding: 0.1em 0.4em;
+			font-family: "Sawarabi Mincho";
+			font-size: 3.2em;
+			color: #fff;
+
+		}
+
+		#header .h1 {
+			padding: 0.1em 2.5em;
+			font-weight: 300;
+			font-size: 1em;
+			white-space: nowrap;
+			color: #fff;
+		}
+
+/* Main */
+	#main {
+		font-weight: 400;
+		font-size: 1.1em;
+		color: #336;
+		white-space: nowrap;
+	}
+
+		#main .step {
+			margin: 2em;
+		}
+
+		#main .btns {
+			margin: 0 2em;
+			font-size: 1.5em;
+		}
+
+		#main .btn {
+			padding-left: 0em;
+			height: 2em;
+			width: 7em;
+			border-radius: 0.3em;
+			background-color: #aad;
+			border: 0.2em #669 solid;
+			transition: .3s;
+		}
+
+		#main .big {
+			width: 15em;
+		}
+
+		#main .btn:hover {
+			color: #fff;
+			background-color: #669;
+		}
+
+		#main .btn:focus {
+			outline: 0;
+		}
+
+		#main .dlb {
+			margin: 1.5em;
+			display: none;
+		}
+
+		#main .download {
+			padding: 0.2em 5em;
+			border-radius: 0.3em;
+			background-color: #aad;
+			border: 0.2em #669 solid;
+			transition: .3s;
+			color: #336;
+			text-decoration: none;
+		}
+
+		#main input {
+			margin: 0.3em;
+			height: 2.5em;
+			width: 24em;
+			text-indent: 0.5em;
+			font-weight: 400;
+			font-size: 1em;
+			color: #336;
+			border: none;
+			background-color: #ddf;
+		}
+
+		#main input[type="text"]:focus,
+		#main textarea:focus {
+			outline: 3px #969 solid;
+		}
+
+		#main input[type="text"]:hover,
+		#main textarea:hover {
+			outline: 3px #969 solid;
+		}
+
+		#main textarea {
+			margin: 0.3em;
+			height: 2.5em;
+			width: 24em;
+			font-weight: 400;
+			font-size: 1em;
+			color: #336;
+			border: none;
+			background-color: #ddf;
+			outline: 0;
+		}
+
+			#main textarea.src {
+				font-family: "Source Code Pro";
+			}
+
+		#main .h1 {
+			margin: 0.5em 0.3em;
+			font-family: "Sawarabi Mincho";
+			font-weight: 700;
+			font-size: 1.5em;
+		}
+
+		#main .h2 {
+			margin: 0.5em 1.2em;
+		}
+
+		#main .h3 {
+			margin: 0.9em 2.4em;
+		}
+
+		#main .h4 {
+			margin-top: 0.5em;
+		}
+
+		#main .src {
+			height: 6em;
+			width: 24em;
+			white-space: normal;
+		}
+
+		#main .err_message {
+			color: #a33;
+		}
+
+		#main .err_color {
+			background-color: #fcc;
+		}
+
+		#main .tips {
+			position: relative;
+			width: 25em;
+			margin: auto;
+		}
+
+		.tooltips {
+			position: absolute;
+			bottom: -2em;
+			left: 19em;
+			z-index: 9999;
+			padding: 0.3em 0.5em;
+			background: #555;
+			border-radius: 0.2em;
+			font-size: 0.9em;
+			color: #fff;
+		}
+
+		.tooltips:after {
+			width: 100%;
+			content: "";
+			position: absolute;
+			left: 2em;
+			top: -8px;
+			border-top:8px solid transparent;
+			border-left:8px solid #555;
+		}
+
+/* Footer */
+	#footer {
+		margin: 3em;
+		text-align: center;
+		white-space: nowrap;
+	}
+
+}
